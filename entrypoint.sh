@@ -30,6 +30,7 @@ TARGET_DIR=$(mktemp -d)
 mv "$CLONE_DIR/.git" "$TARGET_DIR"
 
 echo "Copying contents to git repo"
+rm -rf ./.github
 cp -ra "$SOURCE_DIRECTORY"/. "$TARGET_DIR"
 cd "$TARGET_DIR"
 
